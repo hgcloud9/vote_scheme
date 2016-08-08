@@ -1,0 +1,35 @@
+<% content_for :title do %>topic<% end %>
+<h3> New Committee Proposal  --- Number <%=Topic.top_num%></h3>
+<div> class="form"
+  <%= simple_form_for @topic do |form| %>
+  <%= form.error_notification %>
+  <%= form.input :name, autofocus: true %>
+  <%= form.input :proposal, as: :text %>
+  <%= form.button :submit, 'Submit', class: 'submit' %><br>
+  <%= form.input :comments, as: :text %>
+<% end %>
+
+<table>
+  <tr>
+    <% Topic.listings.each do |listing| %>
+      <td><%= listing %></td>
+    <% end %>
+    <tr>
+   <tr>
+     <% Topic.listings.each do |listing| %>
+    <td>  <%= render 'layouts/button' %> </td>
+     <% end %>
+    </tr>
+
+<% if false %>
+<% Topic.listings.each do |listing| %>
+<tr>
+  <td><%= listing %></td>
+</tr>
+<tr>
+<%= render 'layouts/button'%>
+</tr>
+<% end %>
+</table>
+<% end %>
+</div>
