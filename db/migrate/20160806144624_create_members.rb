@@ -3,7 +3,7 @@ class CreateMembers < ActiveRecord::Migration[5.0]
     create_table :members do |t|
       t.string :name
       t.string :email
-      t.boolean :proposer
+      t.string :password
       t.boolean :admin
 
       t.timestamps
