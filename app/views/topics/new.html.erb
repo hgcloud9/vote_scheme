@@ -17,7 +17,7 @@
     <tr>
    <tr>
      <% Topic.listings.each do |listing| %>
-    <td>  <%= render 'layouts/button' %> </td>
+       <td>  <%= render 'layouts/button', listing: listing %> </td>
      <% end %>
     </tr>
 
