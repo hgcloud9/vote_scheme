@@ -8,5 +8,3 @@ class MemberssController < ApplicationController
     @member = Member.new
 
   end
-
-  

@@ -8,7 +8,7 @@ class Topic < ApplicationRecord
   attr_reader :top_num, :integer
 
   def self.listings
-     @listings = ["A","B","C"]
+     @listings = ["Angie","Clare","Debbie","Helen","Sarah","Vicky","David","Mike","Howard"]
   end
 
    def self.top_num
